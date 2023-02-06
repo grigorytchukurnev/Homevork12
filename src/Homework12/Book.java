@@ -1,6 +1,8 @@
 package Homework12;
 
-         public class Book {
+import java.util.Objects;
+
+public class Book {
               private String name;
               private int year;
               private Author author;
@@ -21,16 +23,40 @@ package Homework12;
               }
 
 
-              public int getYear() {
+               public int getYear() {
                  return year;
-             }
-               public void setYear(int year) { this.year = year; }
+               }
+               public void setYear(int year) {
+                  this.year = year;
+              }
 
 
-              public Author getAuthor() {
+               public Author getAuthor() {
                  return author;
-             }
-              public void setAuthor(Author author) {
+               }
+               public void setAuthor(Author author) {
                  this.author = author;
-             }
-         }
+               }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", year=" + year +
+                ", author=" + author +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return year == book.year && Objects.equals(name, book.name) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, year, author);
+    }
+}

@@ -4,8 +4,8 @@ package Homework12;
          public static void main (String[]arg){
              System.out.println("------------------------------");
 
-             Author author1 = new Author("Иван","Тургенев");
-             System.out.println(author1);
+             Author author1 = new Author("Иван" , "Тургенев");
+             System.out.println("Автор - " +author1);
              Book book1 = new Book();
              book1.setName("Ася");
              System.out.println("Название книги - " +book1.getName());
@@ -17,7 +17,7 @@ package Homework12;
              System.out.println("------------------------------");
 
              Author author2 = new Author("Николай","Гоголь");
-             System.out.println(author2);
+             System.out.println("Автор - " +author2);
              Book book2 = new Book();
              book2.setName("Мертвые Души");
              System.out.println("Название книги - " +book2.getName());
